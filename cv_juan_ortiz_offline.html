@@ -335,6 +335,23 @@
   }
   .sc-sub b { color: #fff; font-weight: 700; }
 
+  .sc-cta {
+    display: inline-flex; align-items: center; gap: 9px; margin-top: 20px;
+    font-size: 13.5px; font-weight: 600; color: #08311a; text-decoration: none;
+    background: linear-gradient(135deg, #5aa849 0%, #4e9d40 100%);
+    padding: 10px 16px; border-radius: 100px;
+    box-shadow: 0 10px 26px -10px rgba(90,168,73,0.65);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  }
+  .sc-cta:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 14px 32px -10px rgba(90,168,73,0.8); }
+  .sc-cta b { font-family:'JetBrains Mono',monospace; font-weight: 700; color: #06250f; }
+  .sc-cta .cta-arr { font-size: 15px; transition: transform 0.18s ease; }
+  .sc-cta:hover .cta-arr { transform: translate(2px, -2px); }
+  .sc-cta .dotlive {
+    width: 8px; height: 8px; border-radius: 50%; background: #06250f;
+    box-shadow: 0 0 0 0 rgba(6,37,15,0.5); animation: pulse 2.4s infinite;
+  }
+
   /* annotated feature callouts — info útil, no texto plano */
   .callouts { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; max-width: 480px; }
   .callout {
@@ -651,6 +668,13 @@
             empresas de construcción. La levantamos <b>entre dos socios, desde cero</b> · seleccionada entre los
             <b>20 finalistas de 60 proyectos</b> en EmprendeUCO – Diputación de Córdoba.
           </p>
+
+          <a class="sc-cta" href="https://opspilot.es" target="_blank" rel="noopener">
+            <span class="dotlive"></span>
+            Ver la web en vivo
+            <b>opspilot.es</b>
+            <span class="cta-arr" aria-hidden="true">↗</span>
+          </a>
 
           <div class="callouts">
             <div class="callout c-anim">
