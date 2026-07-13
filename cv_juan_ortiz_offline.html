@@ -287,6 +287,111 @@
   }
   .perfil .lead em { font-style: italic; color: var(--green); }
   .perfil .lead .hl { font-style: normal; font-weight: 700; color: var(--green); }
+  .vp-punch {
+    margin-top: 18px; display: inline-flex; align-items: center; gap: 9px;
+    font-family:'JetBrains Mono',monospace; font-size: 12px; color: var(--text-soft);
+    background: #fff; border: 1px solid var(--line); border-radius: 100px; padding: 7px 15px;
+  }
+  .vp-punch b { color: var(--green); font-weight: 700; }
+  .vp-punch .pd { width: 7px; height: 7px; border-radius: 50%; background: var(--green-bright); }
+
+  /* ===== bloques con eyebrow ===== */
+  .blk { padding: 46px 50px; border-bottom: 1px solid var(--line); }
+  .blk-2 { background: var(--paper-2); }
+  .blk-lbl {
+    display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px;
+    font-family:'JetBrains Mono',monospace; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.2em; color: var(--green);
+  }
+  .blk-lbl::before { content:""; width: 22px; height: 2px; background: var(--green-lit); }
+  .blk-title {
+    font-family:'Fraunces',Georgia,serif; font-size: clamp(22px,3vw,31px);
+    font-weight: 600; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 22px; line-height: 1.08; max-width: 720px;
+  }
+  .blk-title em { font-style: italic; color: var(--green); }
+
+  /* ===== problemas -> oportunidades ===== */
+  .po-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .po-pair { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px 20px; box-shadow: 0 1px 2px rgba(20,20,31,0.03); }
+  .po-tag { display: block; font-family:'JetBrains Mono',monospace; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 7px; }
+  .po-tag.t-prob { color: #b16a52; }
+  .po-tag.t-opp { color: var(--green); }
+  .po-prob { font-size: 13.5px; color: var(--text); line-height: 1.5; }
+  .po-opp  { font-size: 13.5px; color: var(--green); font-weight: 600; line-height: 1.5; }
+  .po-sep { display: flex; justify-content: center; margin: 14px 0; }
+  .po-sep span { width: 26px; height: 26px; border-radius: 50%; background: var(--green-glow); border: 1px solid rgba(45,90,39,0.25); color: var(--green); display: flex; align-items: center; justify-content: center; font-size: 13px; }
+  .po-punch {
+    margin-top: 22px; font-family:'Fraunces',Georgia,serif; font-size: clamp(16px,2vw,19px); color: var(--ink);
+    line-height: 1.5; padding-left: 20px; border-left: 3px solid var(--green); max-width: 760px;
+  }
+  .po-punch b { color: var(--green); font-weight: 700; }
+
+  /* ===== roles / soluciones ===== */
+  .role-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .role-card {
+    background: #fff; border: 1px solid var(--line); border-top: 2px solid var(--green);
+    border-radius: 10px; padding: 18px 18px 16px; transition: transform .16s ease, box-shadow .16s ease;
+  }
+  .role-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -16px rgba(20,20,31,0.32); }
+  .role-card .ic {
+    width: 36px; height: 36px; border-radius: 9px; background: var(--green-glow);
+    border: 1px solid rgba(45,90,39,0.25); color: var(--green);
+    display:flex; align-items:center; justify-content:center; font-size: 17px; margin-bottom: 13px;
+  }
+  .role-card h3 { font-size: 15px; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 5px; }
+  .role-card p { font-size: 12.8px; color: var(--text-soft); line-height: 1.5; }
+  .role-card .kills { display:block; margin-top: 9px; font-family:'JetBrains Mono',monospace; font-size: 10.5px; color: var(--green-lit); letter-spacing: 0.02em; }
+
+  @media (max-width: 880px) {
+    .blk { padding: 34px 26px; }
+    .po-list { grid-template-columns: 1fr; }
+  }
+  @media print {
+    .blk { padding: 12px 20px !important; break-inside: avoid; }
+    .blk-2 { background: #fff !important; }
+    .po-list { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .po-pair, .po-punch { break-inside: avoid; }
+  }
+
+  /* ===== caso real (marco navegador) ===== */
+  .case-card {
+    max-width: 840px; background: #fff; border: 1px solid var(--line);
+    border-radius: 12px; overflow: hidden; box-shadow: 0 22px 54px -30px rgba(20,20,31,0.42);
+  }
+  .browser-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: linear-gradient(180deg,#20203a 0%,#181830 100%); }
+  .browser-bar .dots { display: inline-flex; gap: 6px; flex: none; }
+  .browser-bar .dots i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.25); }
+  .browser-bar .dots i:nth-child(1){ background:#ff6058; } .browser-bar .dots i:nth-child(2){ background:#ffbd2e; } .browser-bar .dots i:nth-child(3){ background:#28c840; }
+  .browser-bar .url { flex: 1; font-family:'JetBrains Mono',monospace; font-size: 11.5px; color:#cfcde2; background: rgba(255,255,255,0.08); border-radius: 6px; padding: 5px 12px; }
+  .case-body { padding: 22px 24px 24px; }
+  .case-lead { font-size: 14px; color: var(--text); line-height: 1.55; margin-bottom: 16px; }
+  .case-two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .case-facet { background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 15px; }
+  .case-facet .cf-ic {
+    width: 34px; height: 34px; border-radius: 9px; background: var(--green-glow);
+    border: 1px solid rgba(45,90,39,0.25); display:flex; align-items:center; justify-content:center; font-size: 17px;
+  }
+  .case-facet b { display:block; margin: 9px 0 4px; font-size: 13.5px; color: var(--ink); }
+  .case-facet p { font-size: 12.5px; color: var(--text-soft); line-height: 1.5; }
+  .case-punch { margin-top: 16px; font-family:'Fraunces',Georgia,serif; font-size: 16.5px; color: var(--ink); line-height: 1.5; }
+  .case-punch b { color: var(--green); font-weight: 700; }
+  .case-cta { margin-top: 18px; }
+  @media (max-width: 880px){ .case-two { grid-template-columns: 1fr; } }
+  @media print {
+    .case-card { box-shadow: none; break-inside: avoid; }
+    .browser-bar { background:#20203a !important; }
+    .case-facet { break-inside: avoid; }
+  }
+
+  /* ===== para quién es / valor de una persona ===== */
+  .aud { background: linear-gradient(180deg, rgba(45,90,39,0.06), transparent 62%), var(--paper-2); }
+  .aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .aud-card { background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; padding: 18px 20px 19px; }
+  .aud-k { display: block; font-family:'JetBrains Mono',monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--green); margin-bottom: 9px; }
+  .aud-card p { font-size: 13.5px; color: var(--text); line-height: 1.55; }
+  .aud-card p b { color: var(--ink); font-weight: 700; }
+  @media (max-width: 880px){ .aud-grid { grid-template-columns: 1fr; } }
+  @media print { .aud { background:#fff !important; } .aud-card { break-inside: avoid; } }
 
   /* ===================== OPSPILOT SHOWCASE (full-width dark band) ===================== */
   .showcase {
@@ -609,6 +714,87 @@
     footer.foot { background: #fff !important; color: #555 !important; border-top: 1px solid #ddd; }
     footer.foot .accent { color: var(--green) !important; }
   }
+
+  /* ============ IMPRESIÓN COMPACTA (~2 páginas) ============ */
+  @media print {
+    @page { size: A4; margin: 9mm; }
+    html, body { font-size: 9.3px !important; }
+    .print-hide { display: none !important; }
+
+    header.masthead { padding: 12px 16px 10px !important; }
+    .masthead-inner { gap: 16px !important; }
+    .mast-photo img { width: 76px !important; height: 95px !important; }
+    h1.name { font-size: 21px !important; }
+    .eyebrow { margin-bottom: 7px !important; font-size: 9px !important; }
+    .titular { margin-top: 6px !important; font-size: 11px !important; }
+    .contact { margin-top: 9px !important; gap: 3px 16px !important; font-size: 10px !important; }
+
+    .perfil { padding: 11px 16px !important; }
+    .perfil-eyebrow { margin-bottom: 8px !important; }
+    .perfil .lead { font-size: 11px !important; padding-left: 12px !important; }
+
+    .blk { padding: 11px 16px !important; }
+    .blk-lbl { margin-bottom: 6px !important; }
+    .blk-title { font-size: 14.5px !important; margin-bottom: 10px !important; }
+
+    /* problemas: denso */
+    .po-list { gap: 7px !important; }
+    .po-pair { padding: 9px 12px !important; }
+    .po-tag { margin-bottom: 3px !important; font-size: 8.5px !important; }
+    .po-prob, .po-opp { font-size: 9.6px !important; line-height: 1.32 !important; }
+    .po-sep { margin: 5px 0 !important; }
+    .po-sep span { width: 17px !important; height: 17px !important; font-size: 9px !important; }
+    .po-punch { margin-top: 9px !important; font-size: 11.5px !important; padding-left: 12px !important; }
+
+    /* opspilot: fuera lo accesorio en papel */
+    .showcase { padding: 12px 16px !important; }
+    .callouts, .sc-stack { display: none !important; }
+    .sc-title { font-size: 24px !important; }
+    .sc-sub { font-size: 10.5px !important; margin-top: 6px !important; }
+    .sc-cta { margin-top: 8px !important; padding: 7px 13px !important; }
+    .sc-press { margin-top: 10px !important; padding-top: 8px !important; }
+    .press-links { gap: 3px 16px !important; }
+
+    /* obrafácil compacto */
+    .case-body { padding: 12px 15px !important; }
+    .case-lead { font-size: 10.3px !important; margin-bottom: 8px !important; }
+    .case-two { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+    .case-facet { padding: 9px 12px !important; }
+    .case-facet b { margin: 0 0 3px !important; font-size: 11px !important; }
+    .case-facet p { font-size: 9.6px !important; line-height: 1.35 !important; }
+    .case-punch { font-size: 11.5px !important; margin-top: 9px !important; }
+    .case-cta { margin-top: 9px !important; padding: 7px 13px !important; }
+
+    /* para quién */
+    .aud-grid { grid-template-columns: 1fr 1fr !important; gap: 9px !important; }
+    .aud-card { padding: 10px 13px !important; }
+    .aud-card p { font-size: 10px !important; line-height: 1.38 !important; }
+
+    /* experiencia + lateral */
+    .main { padding: 12px 16px !important; }
+    .aside { padding: 12px 14px !important; }
+    section { margin-bottom: 8px !important; }
+    .sec-head { margin-bottom: 7px !important; }
+    .sec-head h2 { font-size: 16px !important; }
+    .item { margin-bottom: 7px !important; }
+    .role { font-size: 11px !important; }
+    ul.bullets { margin-top: 4px !important; }
+    ul.bullets li { font-size: 9.6px !important; margin-bottom: 1px !important; }
+    .edu-item { margin-bottom: 7px !important; }
+    .lbl-compact { margin-bottom: 8px !important; }
+    .stack-group { margin-bottom: 8px !important; }
+    .stack-cat { margin-bottom: 5px !important; }
+    .tags { gap: 4px !important; }
+    .tag { padding: 2px 7px !important; font-size: 9.4px !important; }
+    .comp-card { padding: 9px 11px !important; }
+    .comp-card h4 { font-size: 11px !important; }
+    .comp-card .comp-meta { margin: 3px 0 6px !important; }
+    .comp-card li { font-size: 9.4px !important; margin-bottom: 2px !important; line-height: 1.3 !important; }
+    .info-row { padding: 4px 0 !important; font-size: 9.6px !important; }
+    .info-row .k { min-width: 68px !important; }
+
+    footer.foot { padding: 7px 16px !important; font-size: 9.4px !important; }
+  }
 </style>
 </head>
 <body>
@@ -619,14 +805,14 @@
       <div class="glow"></div>
       <div class="masthead-inner">
         <div class="mast-text">
-          <span class="eyebrow anim"><span class="dot"></span>CURRICULUM · CÓRDOBA, ESPAÑA</span>
+          <span class="eyebrow anim"><span class="dot"></span>DIGITALIZACIÓN PARA PYMES · CÓRDOBA, ESPAÑA</span>
           <h1 class="name anim">Juan <span class="b">Ortiz</span> Romero</h1>
           <div class="titular anim">
-            <span class="seg">Técnico Comercial</span>
+            <span class="seg">Marketing</span>
             <span class="sep mono">/</span>
-            <span class="seg">Desarrollo Software</span>
+            <span class="seg">Apps a medida</span>
             <span class="sep mono">/</span>
-            <span class="seg">IA</span>
+            <span class="seg">IA aplicada</span>
           </div>
           <div class="contact anim">
             <a href="tel:+34605098187"><span class="key mono">TEL</span>605 098 187</a>
@@ -645,13 +831,49 @@
 
     <!-- ===================== PERFIL (full width) ===================== -->
     <section class="perfil" data-reveal>
-      <span class="perfil-eyebrow">Perfil</span>
+      <span class="perfil-eyebrow">A qué me dedico</span>
       <p class="lead">
-        Técnico comercial del sector construcción que <span class="hl">crea software para resolver problemas reales</span>.
-        Uno el trato directo con el cliente y la visión de negocio con la capacidad de convertir un dolor de cabeza
-        del día a día en una herramienta que funciona. Cofundé <span class="hl">OpsPilot</span> junto a un socio
-        —finalista de EmprendeUCO 2025— y busco un sitio donde conectar la venta, la tecnología y la inteligencia artificial.
+        Hago dos cosas que casi siempre van por separado: <span class="hl">traer clientes</span> (marketing, web, contenido)
+        y <span class="hl">construir las herramientas</span> que un negocio necesita para funcionar mejor por dentro.
+        Me interesa hacerlo desde dentro de un equipo, contratado, no como una agencia de fuera.
       </p>
+    </section>
+
+    <!-- ===================== PROBLEMAS -> OPORTUNIDADES ===================== -->
+    <section class="blk" data-reveal>
+      <span class="blk-lbl">Lo que suelo arreglar</span>
+      <h2 class="blk-title">Casi cualquier negocio pequeño tiene estos cuatro problemas. Y todos tienen solución.</h2>
+      <div class="po-list">
+        <div class="po-pair">
+          <span class="po-tag t-prob">El problema</span>
+          <p class="po-prob">Tienen una web floja, o directamente no tienen. La gente busca en Google y encuentra a otros.</p>
+          <div class="po-sep"><span>↓</span></div>
+          <span class="po-tag t-opp">Lo que hago</span>
+          <p class="po-opp">Una web que se ve seria y por la que de verdad llegan clientes.</p>
+        </div>
+        <div class="po-pair">
+          <span class="po-tag t-prob">El problema</span>
+          <p class="po-prob">Los presupuestos, el stock y los datos andan sueltos entre Excel, papel y WhatsApp.</p>
+          <div class="po-sep"><span>↓</span></div>
+          <span class="po-tag t-opp">Lo que hago</span>
+          <p class="po-opp">Una herramienta a medida donde está todo junto y ordenado.</p>
+        </div>
+        <div class="po-pair">
+          <span class="po-tag t-prob">El problema</span>
+          <p class="po-prob">Pagan varias apps cada mes que ni siquiera se conectan entre ellas.</p>
+          <div class="po-sep"><span>↓</span></div>
+          <span class="po-tag t-opp">Lo que hago</span>
+          <p class="po-opp">Una sola, pensada para cómo trabajan ellos.</p>
+        </div>
+        <div class="po-pair">
+          <span class="po-tag t-prob">El problema</span>
+          <p class="po-prob">La IA les suena, pero no la usan para nada concreto.</p>
+          <div class="po-sep"><span>↓</span></div>
+          <span class="po-tag t-opp">Lo que hago</span>
+          <p class="po-opp">Automatizar esas tareas repetidas que hoy hacen a mano.</p>
+        </div>
+      </div>
+      <p class="po-punch">Tampoco hace falta hacerlo todo de golpe. Se empieza por lo que más molesta y se va sumando.</p>
     </section>
 
     <!-- ===================== OPSPILOT SHOWCASE ===================== -->
@@ -664,9 +886,8 @@
           <div class="sc-kicker"><span class="badge2">★ FINALISTA EMPRENDEUCO 2025</span></div>
           <h1 class="sc-title"><span class="sc-logo"><svg class="op-logo" viewBox="0 0 100 100" role="img" aria-label="Logo OpsPilot"><path d="M13 50 A37 37 0 0 1 68.5 18" fill="none" stroke="#11406a" stroke-width="16"/><path d="M82 31.5 A37 37 0 0 1 18 68.5" fill="none" stroke="#35d07d" stroke-width="16"/></svg></span>OpsPilot</h1>
           <p class="sc-sub">
-            Una app que reúne presupuestos, inventario y operaciones en un solo sitio para autónomos y pequeñas
-            empresas de construcción. La levantamos <b>entre dos socios, desde cero</b> · seleccionada entre los
-            <b>20 finalistas de 60 proyectos</b> en EmprendeUCO – Diputación de Córdoba.
+            Una app de gestión que hice con un socio, desde cero. Está funcionando y quedó entre los finalistas
+            de EmprendeUCO 2025. Aquí al lado puedes verla por dentro.
           </p>
 
           <a class="sc-cta" href="https://opspilot.es" target="_blank" rel="noopener">
@@ -783,6 +1004,46 @@
       </div>
     </section>
 
+    <!-- ===================== CASO REAL: OBRAFÁCIL ===================== -->
+    <section class="blk" data-reveal>
+      <span class="blk-lbl">Caso real · cliente</span>
+      <h2 class="blk-title">Obrafácil: ya tenían al público, les faltaba <em>dónde vender</em>.</h2>
+      <div class="case-card">
+        <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">🔒 obrafacil2025.es</span></div>
+        <div class="case-body">
+          <p class="case-lead">Es un negocio familiar de placas de PVC y decoración. En TikTok se les daba genial y tenían gente detrás, pero no un sitio en condiciones para vender ni una forma de llevar el control de todo.</p>
+          <div class="case-two">
+            <div class="case-facet">
+              <b>La tienda</b>
+              <p>Les monté la tienda online: un sitio serio donde se puede comprar de verdad y que aguanta cuando la cosa crece.</p>
+            </div>
+            <div class="case-facet">
+              <b>El panel de detrás</b>
+              <p>Junta las ventas, calcula las rutas, saca las facturas y se conecta con el inventario. A final de mes ven de un vistazo cómo ha ido.</p>
+            </div>
+          </div>
+          <p class="case-punch">Ellos ya traían a la gente. Lo que faltaba era dónde comprar y cómo no perder el hilo. Eso es lo que hice.</p>
+          <a class="sc-cta case-cta" href="https://obrafacil2025.es" target="_blank" rel="noopener"><span class="dotlive"></span>Ver la tienda en vivo <b>obrafacil2025.es</b> <span class="cta-arr" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARA QUIÉN ES ===================== -->
+    <section class="blk aud" data-reveal>
+      <span class="blk-lbl">Para quién es</span>
+      <h2 class="blk-title">Para el negocio que ya funciona y quiere <em>dar el salto</em>.</h2>
+      <div class="aud-grid">
+        <div class="aud-card">
+          <span class="aud-k">¿Es tu momento?</span>
+          <p>Me entiendo bien con la gente que quiere hacer las cosas bien y tiene ganas de verdad de crecer. Si tu negocio ya funciona y quieres llevarlo más lejos, vamos a entendernos.</p>
+        </div>
+        <div class="aud-card">
+          <span class="aud-k">Una sola persona</span>
+          <p>Para esto normalmente necesitarías una agencia de marketing por un lado y un desarrollador por otro. Yo hago las dos cosas, dentro de tu equipo: abres una capacidad nueva sin tener que montar un departamento entero.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== BODY GRID ===================== -->
     <div class="body-grid">
       <div class="main">
@@ -833,7 +1094,7 @@
       </div>
 
       <aside class="aside">
-        <section data-reveal>
+        <section data-reveal class="print-hide">
           <div class="lbl-compact">Cómo trabajo</div>
           <div class="stack-group">
             <div class="stack-cat">Lo que aporto</div>
@@ -869,7 +1130,7 @@
     </div>
 
     <footer class="foot">
-      <span>Juan Ortiz Romero <span class="accent">//</span> Desarrollo · IA · Comercial</span>
+      <span>Juan Ortiz Romero <span class="accent">//</span> Marketing · Apps a medida · IA para pymes</span>
       <span class="accent">Actualizado junio 2026</span>
     </footer>
   </main>
