@@ -390,6 +390,18 @@
   .aud-k { display: block; font-family:'JetBrains Mono',monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--green); margin-bottom: 9px; }
   .aud-card p { font-size: 13.5px; color: var(--text); line-height: 1.55; }
   .aud-card p b { color: var(--ink); font-weight: 700; }
+
+  /* ===== más proyectos (reutiliza role-card) + herramientas ===== */
+  .role-card .kills a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .role-card .kills a:hover { color: var(--green); }
+  .aside .proof { margin-top: 14px; font-size: 12.5px; color: var(--text-soft); line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--green); }
+  @media (max-width: 880px) { .role-grid { grid-template-columns: 1fr; } }
+  @media print {
+    .role-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .role-card { break-inside: avoid; padding: 9px 12px !important; }
+    .role-card .ic { display: none; }
+    .role-card p { font-size: 9.6px !important; }
+  }
   @media (max-width: 880px){ .aud-grid { grid-template-columns: 1fr; } }
   @media print { .aud { background:#fff !important; } .aud-card { break-inside: avoid; } }
 
@@ -805,12 +817,12 @@
       <div class="glow"></div>
       <div class="masthead-inner">
         <div class="mast-text">
-          <span class="eyebrow anim"><span class="dot"></span>DIGITALIZACIÓN PARA PYMES · CÓRDOBA, ESPAÑA</span>
+          <span class="eyebrow anim"><span class="dot"></span>WEB · E-COMMERCE · MARKETING · IA — CÓRDOBA, ESPAÑA</span>
           <h1 class="name anim">Juan <span class="b">Ortiz</span> Romero</h1>
           <div class="titular anim">
-            <span class="seg">Marketing</span>
+            <span class="seg">Desarrollo web y e-commerce</span>
             <span class="sep mono">/</span>
-            <span class="seg">Apps a medida</span>
+            <span class="seg">Marketing digital</span>
             <span class="sep mono">/</span>
             <span class="seg">IA aplicada</span>
           </div>
@@ -833,47 +845,11 @@
     <section class="perfil" data-reveal>
       <span class="perfil-eyebrow">A qué me dedico</span>
       <p class="lead">
-        Hago dos cosas que casi siempre van por separado: <span class="hl">traer clientes</span> (marketing, web, contenido)
-        y <span class="hl">construir las herramientas</span> que un negocio necesita para funcionar mejor por dentro.
-        Me interesa hacerlo desde dentro de un equipo, contratado, no como una agencia de fuera.
+        Sé llevar un proyecto de cliente de principio a fin: <span class="hl">entender el negocio</span>, montar la web o la tienda,
+        <span class="hl">conectar el marketing con lo que pasa dentro</span> (stock, pedidos, datos) y medir si funciona.
+        Vengo de vender cara a cara y de construir mis propias herramientas, así que entiendo las dos mitades:
+        la que trae clientes y la que hace que el negocio ruede.
       </p>
-    </section>
-
-    <!-- ===================== PROBLEMAS -> OPORTUNIDADES ===================== -->
-    <section class="blk" data-reveal>
-      <span class="blk-lbl">Lo que suelo arreglar</span>
-      <h2 class="blk-title">Casi cualquier negocio pequeño tiene estos cuatro problemas. Y todos tienen solución.</h2>
-      <div class="po-list">
-        <div class="po-pair">
-          <span class="po-tag t-prob">El problema</span>
-          <p class="po-prob">Tienen una web floja, o directamente no tienen. La gente busca en Google y encuentra a otros.</p>
-          <div class="po-sep"><span>↓</span></div>
-          <span class="po-tag t-opp">Lo que hago</span>
-          <p class="po-opp">Una web que se ve seria y por la que de verdad llegan clientes.</p>
-        </div>
-        <div class="po-pair">
-          <span class="po-tag t-prob">El problema</span>
-          <p class="po-prob">Los presupuestos, el stock y los datos andan sueltos entre Excel, papel y WhatsApp.</p>
-          <div class="po-sep"><span>↓</span></div>
-          <span class="po-tag t-opp">Lo que hago</span>
-          <p class="po-opp">Una herramienta a medida donde está todo junto y ordenado.</p>
-        </div>
-        <div class="po-pair">
-          <span class="po-tag t-prob">El problema</span>
-          <p class="po-prob">Pagan varias apps cada mes que ni siquiera se conectan entre ellas.</p>
-          <div class="po-sep"><span>↓</span></div>
-          <span class="po-tag t-opp">Lo que hago</span>
-          <p class="po-opp">Una sola, pensada para cómo trabajan ellos.</p>
-        </div>
-        <div class="po-pair">
-          <span class="po-tag t-prob">El problema</span>
-          <p class="po-prob">La IA les suena, pero no la usan para nada concreto.</p>
-          <div class="po-sep"><span>↓</span></div>
-          <span class="po-tag t-opp">Lo que hago</span>
-          <p class="po-opp">Automatizar esas tareas repetidas que hoy hacen a mano.</p>
-        </div>
-      </div>
-      <p class="po-punch">Tampoco hace falta hacerlo todo de golpe. Se empieza por lo que más molesta y se va sumando.</p>
     </section>
 
     <!-- ===================== OPSPILOT SHOWCASE ===================== -->
@@ -1007,7 +983,7 @@
     <!-- ===================== CASO REAL: OBRAFÁCIL ===================== -->
     <section class="blk" data-reveal>
       <span class="blk-lbl">Caso real · cliente</span>
-      <h2 class="blk-title">Obrafácil: ya tenían al público, les faltaba <em>dónde vender</em>.</h2>
+      <h2 class="blk-title">ObraFácil: ya tenían al público, les faltaba <em>dónde vender</em>.</h2>
       <div class="case-card">
         <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">🔒 obrafacil2025.es</span></div>
         <div class="case-body">
@@ -1022,24 +998,40 @@
               <p>Junta las ventas, calcula las rutas, saca las facturas y se conecta con el inventario. A final de mes ven de un vistazo cómo ha ido.</p>
             </div>
           </div>
-          <p class="case-punch">Ellos ya traían a la gente. Lo que faltaba era dónde comprar y cómo no perder el hilo. Eso es lo que hice.</p>
+          <p class="case-punch"><b>Más del 60 % de las ventas pasaron al canal web en los primeros meses.</b> Ellos ya traían a la gente por TikTok; lo que faltaba era dónde comprar y cómo no perder el hilo. Eso es lo que hice.</p>
           <a class="sc-cta case-cta" href="https://obrafacil2025.es" target="_blank" rel="noopener"><span class="dotlive"></span>Ver la tienda en vivo <b>obrafacil2025.es</b> <span class="cta-arr" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== PARA QUIÉN ES ===================== -->
-    <section class="blk aud" data-reveal>
-      <span class="blk-lbl">Para quién es</span>
-      <h2 class="blk-title">Para el negocio que ya funciona y quiere <em>dar el salto</em>.</h2>
-      <div class="aud-grid">
-        <div class="aud-card">
-          <span class="aud-k">¿Es tu momento?</span>
-          <p>Me entiendo bien con la gente que quiere hacer las cosas bien y tiene ganas de verdad de crecer. Si tu negocio ya funciona y quieres llevarlo más lejos, vamos a entendernos.</p>
+    <!-- ===================== MÁS PROYECTOS ===================== -->
+    <section class="blk blk-2" data-reveal>
+      <span class="blk-lbl">Más proyectos</span>
+      <h2 class="blk-title">Otros trabajos, grandes y pequeños, cada uno etiquetado <em>como lo que es</em>.</h2>
+      <div class="role-grid">
+        <div class="role-card">
+          <div class="ic">◎</div>
+          <h3>Rodríguez Reformas</h3>
+          <p>Web para una empresa de reformas, hecha para salir en Google en su zona y para que el cliente llame, no solo mire.</p>
+          <span class="kills">// cliente real · <a href="https://rodriguezreformas.es" target="_blank" rel="noopener">rodriguezreformas.es ↗</a></span>
         </div>
-        <div class="aud-card">
-          <span class="aud-k">Una sola persona</span>
-          <p>Para esto normalmente necesitarías una agencia de marketing por un lado y un desarrollador por otro. Yo hago las dos cosas, dentro de tu equipo: abres una capacidad nueva sin tener que montar un departamento entero.</p>
+        <div class="role-card">
+          <div class="ic">▤</div>
+          <h3>The Fire Barber</h3>
+          <p>ERP completo a medida para una barbería: la gestión del día a día en una sola herramienta, en vez de en varias.</p>
+          <span class="kills">// cliente real · herramienta interna</span>
+        </div>
+        <div class="role-card">
+          <div class="ic">⇄</div>
+          <h3>Melendo</h3>
+          <p>Auditoría de su presencia digital y una maqueta de cómo debería ser, para poder decidir con algo delante.</p>
+          <span class="kills">// auditoría y propuesta</span>
+        </div>
+        <div class="role-card">
+          <div class="ic">✦</div>
+          <h3>Dígito Rotulación</h3>
+          <p>Auditoría de su web con una propuesta de mejora concreta, priorizada por lo que más les frena.</p>
+          <span class="kills">// auditoría y propuesta</span>
         </div>
       </div>
     </section>
@@ -1049,6 +1041,18 @@
       <div class="main">
         <section data-reveal>
           <div class="sec-head"><span class="sec-num">01</span><h2>Experiencia</h2><span class="line"></span></div>
+          <div class="item">
+            <div class="item-head">
+              <div class="role">Cofundador <span class="at">— OpsPilot</span></div>
+              <div class="meta mono">2024 — actualidad</div>
+            </div>
+            <div class="place"><span class="co-chip"><svg viewBox="0 0 100 100" width="14" height="14" aria-hidden="true"><path d="M13 50 A37 37 0 0 1 68.5 18" fill="none" stroke="#11406a" stroke-width="16"/><path d="M82 31.5 A37 37 0 0 1 18 68.5" fill="none" stroke="#35d07d" stroke-width="16"/></svg><span class="eci-wm">OpsPilot</span></span>Córdoba · Software de gestión para pymes</div>
+            <ul class="bullets">
+              <li>Producto SaaS construido de cero con un socio y en producción: presupuestos, inventario y operaciones en un solo sitio.</li>
+              <li>Finalista del programa EmprendeUCO – Diputación de Córdoba 2025 (20 seleccionados entre 60 proyectos).</li>
+              <li>Me encargo de hablar con los clientes, decidir qué se construye y montarlo.</li>
+            </ul>
+          </div>
           <div class="item">
             <div class="item-head">
               <div class="role">Vendedor Especialista <span class="at">— Obramat</span></div>
@@ -1094,16 +1098,21 @@
       </div>
 
       <aside class="aside">
-        <section data-reveal class="print-hide">
-          <div class="lbl-compact">Cómo trabajo</div>
+        <section data-reveal>
+          <div class="lbl-compact">Herramientas</div>
           <div class="stack-group">
-            <div class="stack-cat">Lo que aporto</div>
-            <div class="tags"><span class="tag">Trato con el cliente</span><span class="tag">Visión de negocio</span><span class="tag">Resolución de problemas</span><span class="tag">Autonomía</span><span class="tag">Aprendizaje rápido</span></div>
+            <div class="stack-cat">Web y datos</div>
+            <div class="tags"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">WordPress</span></div>
           </div>
           <div class="stack-group">
-            <div class="stack-cat">Herramientas</div>
-            <div class="tags"><span class="tag">Desarrollo asistido por IA</span><span class="tag">Trabajo en equipo</span></div>
+            <div class="stack-cat">Marketing y medición</div>
+            <div class="tags"><span class="tag">Google Analytics</span><span class="tag">Search Console</span><span class="tag">Meta Business</span><span class="tag">WhatsApp Business</span></div>
           </div>
+          <div class="stack-group">
+            <div class="stack-cat">IA</div>
+            <div class="tags"><span class="tag">Claude / GPT para automatizar</span></div>
+          </div>
+          <p class="proof">Nada de esto viene de un título: lo aprendí por mi cuenta para montar OpsPilot y ObraFácil.</p>
         </section>
 
         <section data-reveal>
@@ -1124,14 +1133,13 @@
           <div class="info-row"><span class="k">Idiomas</span><span class="v">Español (nativo) · Inglés (alto)</span></div>
           <div class="info-row"><span class="k">Disponib.</span><span class="v">Total</span></div>
           <div class="info-row"><span class="k">Movilidad</span><span class="v">Carnet de conducir + coche propio</span></div>
-          <div class="info-row"><span class="k">Nacimiento</span><span class="v">26 de agosto de 2004 · Córdoba</span></div>
         </section>
       </aside>
     </div>
 
     <footer class="foot">
-      <span>Juan Ortiz Romero <span class="accent">//</span> Marketing · Apps a medida · IA para pymes</span>
-      <span class="accent">Actualizado junio 2026</span>
+      <span>Juan Ortiz Romero <span class="accent">//</span> Desarrollo web · Marketing · IA</span>
+      <span class="accent">Actualizado septiembre 2026</span>
     </footer>
   </main>
 
