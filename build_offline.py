@@ -10,7 +10,8 @@ OUT = "cv_juan_ortiz_offline.html"
 CSS_URL = ("https://fonts.googleapis.com/css2?"
            "family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700"
            "&family=JetBrains+Mono:wght@400;500;700"
-           "&family=Manrope:wght@400;500;600;700;800&display=swap")
+           "&family=Manrope:wght@400;500;600;700;800"
+           "&family=Archivo+Black&display=swap")
 GSAP = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
 SCRT = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
 
